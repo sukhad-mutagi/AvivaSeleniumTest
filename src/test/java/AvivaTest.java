@@ -18,11 +18,14 @@ public class AvivaTest {
 //		  File src = new File("D:/phantomjs-2.1.1-windows/bin/phantomjs");
 		  System.setProperty("phantomjs.binary.path", "/ext/tools/phantomjs-2.1.1-linux-x86_64/bin/phantomjs");
 		  driver = new PhantomJSDriver();
+		  System.out.println("setup complete");
 
 	  }
   @Test
   public void test1() {
+	  
 			driver.get("http://10.207.166.31:8080/aviva-0.0.1-SNAPSHOT");
+	  		System.out.println("Complete");
 			String title = driver.getTitle();	
 			System.out.println(title);
 			Assert.assertTrue(title.contains("aviva"));	
